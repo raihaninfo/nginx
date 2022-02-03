@@ -73,3 +73,16 @@ sudo service crud start
 ```
 sudo systemctl enable crud
 ```
+
+```
+cd /etc/nginx/sites-available
+```
+```
+server {
+    server_name crud www.crud;
+
+    location / {
+        proxy_pass http://localhost:8080;
+    }
+}
+```
