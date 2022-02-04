@@ -1,4 +1,4 @@
-## Virtual Hosting using nginx
+## Go Virtual Hosting using nginx
 
 ```
 nano /etc/nginx/conf.d/crud.conf
