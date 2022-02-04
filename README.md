@@ -1,7 +1,9 @@
 ## Virtual Hosting using nginx
+
 ```
 nano /etc/nginx/conf.d/crud.conf
 ```
+
 ```
 server {
         listen 80;
@@ -26,6 +28,7 @@ server {
 ```
 
 ## NGINX STATUS & RESTART
+
 ```
 sudo systemctl status nginx
 sudo systemctl reload nginx
@@ -33,6 +36,7 @@ sudo systemctl restart nginx
 ```
 
 ## Systemd service file
+
 ```
 sudo nano /lib/systemd/system/crud.service
 ```
@@ -54,22 +58,27 @@ WantedBy=multi-user.target
 ```
 
 ## Set permission
+
 ```
 sudo chmod 664 /lib/systemd/system/crud.service
 
 ```
 
 ## Reload systemd daemon
+
 ```
 sudo systemctl daemon-reload
 ```
-## Check service status & Restart 
+
+## Check service status & Restart
+
 ```
 sudo service crud status
 sudo service crud start
 ```
 
 ## Enable to start services automatically at boot
+
 ```
 sudo systemctl enable crud
 ```
@@ -77,6 +86,7 @@ sudo systemctl enable crud
 ```
 cd /etc/nginx/sites-available
 ```
+
 ```
 server {
     server_name crud www.crud;
